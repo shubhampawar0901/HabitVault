@@ -70,21 +70,12 @@ export const useHabits = () => {
         loading: false,
         error: "Failed to load habits. Please try again.",
       }));
-      showToast.error("Error loading habits");
+      // showToast.error("Error loading habits");
     }
   }, []);
 
   // Get today's date in YYYY-MM-DD format
   const getTodayString = () => {
-    // TEMPORARY FIX: Using test date (2025-05-14) instead of actual today's date
-    // This is to match the test data in the database
-    // In production, this should use the actual today's date:
-    // const today = new Date();
-    // const year = today.getFullYear();
-    // const month = String(today.getMonth() + 1).padStart(2, "0");
-    // const day = String(today.getDate()).padStart(2, "0");
-    // return `${year}-${month}-${day}`;
-
     console.log("Using test date for habits:", "2025-05-14");
     return "2025-05-14"; // Using test date to match the database
   };
@@ -178,7 +169,7 @@ export const useHabits = () => {
       // Refresh dashboard data even on error to ensure consistency
       refreshDashboard();
 
-      showToast.error("Failed to update habit status");
+      // showToast.error("Failed to update habit status");
     }
   };
 
@@ -228,7 +219,7 @@ export const useHabits = () => {
     if (state.habits.length > 0) {
       fetchTodayCheckins();
     }
-  }, [state.habits.length]);
+  }, [state.habits.length, fetchTodayCheckins]);
 
   // Apply search and filters
   const applyFilters = (
@@ -342,7 +333,7 @@ export const useHabits = () => {
         loading: false,
         error: "Failed to create habit. Please try again.",
       }));
-      showToast.error("Error creating habit");
+      // showToast.error("Error creating habit");
       throw error;
     }
   };
@@ -361,7 +352,7 @@ export const useHabits = () => {
         loading: false,
         error: "Failed to update habit. Please try again.",
       }));
-      showToast.error("Error updating habit");
+      // showToast.error("Error updating habit");
       throw error;
     }
   };
@@ -380,7 +371,7 @@ export const useHabits = () => {
         loading: false,
         error: "Failed to delete habit. Please try again.",
       }));
-      showToast.error("Error deleting habit");
+      // showToast.error("Error deleting habit");
       throw error;
     }
   };
