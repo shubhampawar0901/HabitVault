@@ -6,8 +6,6 @@ export const AUTH_ENDPOINTS = {
   REGISTER: "/auth/register",
   LOGOUT: "/auth/logout",
   // REFRESH_TOKEN endpoint removed as we're not using refresh tokens
-  FORGOT_PASSWORD: "/auth/forgot-password",
-  RESET_PASSWORD: "/auth/reset-password",
   VERIFY_RESET_TOKEN: "/auth/reset-password/verify",
   GET_ME: "/auth/me",
 };

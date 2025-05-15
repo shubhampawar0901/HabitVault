@@ -45,9 +45,7 @@ const LoginPage = () => {
       console.error('Login failed:', err);
 
       // Handle validation errors
-      if (err.response?.data?.errors) {
-        setFieldErrors(err.response.data.errors);
-      }
+
     }
   };
 
@@ -88,9 +86,6 @@ const LoginPage = () => {
             <label htmlFor="password" className="block text-sm font-medium text-gray-700">
               Password
             </label>
-            <Link to="/forgot-password" className="text-sm text-blue-600 hover:text-blue-800">
-              Forgot password?
-            </Link>
           </div>
           <input
             type="password"
