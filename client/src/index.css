@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom base styles can be added below */
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Dashboard layout variables */
+  --sidebar-width: 18rem;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 767px) {
+  :root {
+    --sidebar-width: 0;
+  }
+}
