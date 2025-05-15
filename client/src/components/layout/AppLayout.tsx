@@ -72,12 +72,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
           icon: <BarChart2 size={20} />,
           active: location.pathname === "/analytics",
         },
-        {
-          title: "Calendar",
-          path: "/calendar",
-          icon: <Calendar size={20} />,
-          active: location.pathname === "/calendar",
-        },
+        // Calendar item removed from sidebar
       ],
     },
     {

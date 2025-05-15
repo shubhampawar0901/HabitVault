@@ -65,7 +65,6 @@ const Dashboard = () => {
       items: [
         { title: "Dashboard", icon: <Home size={20} />, path: "/dashboard", active: true },
         { title: "Habits", icon: <Layers size={20} />, path: "/habits" },
-        { title: "Calendar", icon: <Calendar size={20} />, path: "/calendar" },
         { title: "Analytics", icon: <BarChart2 size={20} />, path: "/analytics" },
       ],
     },
