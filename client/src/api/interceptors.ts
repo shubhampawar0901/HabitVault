@@ -85,10 +85,10 @@ export function setupInterceptors(api: AxiosInstance): void {
         }
       } else if (error.request) {
         // The request was made but no response was received
-        showToast.error("Network error, please check your connection");
+        // showToast.error("Network error, please check your connection");
       } else {
         // Something happened in setting up the request
-        showToast.error("An error occurred while processing your request");
+        // showToast.error("An error occurred while processing your request");
       }
 
       return Promise.reject(error);

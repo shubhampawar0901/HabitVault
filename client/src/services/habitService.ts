@@ -180,14 +180,14 @@ export const habitService = {
 
     // Use Promise.all for parallel requests to improve performance
     const promises = habits.map(async (habit) => {
-      try {
-        const checkins = await habitService.getCheckins(habit.id, date, date);
-        if (checkins.length > 0) {
-          checkinMap[habit.id] = checkins[0];
-        }
-      } catch (e) {
-        console.error(`Error fetching checkin for habit ${habit.id}:`, e);
+      // try {
+      const checkins = await habitService.getCheckins(habit.id, date, date);
+      if (checkins.length > 0) {
+        checkinMap[habit.id] = checkins[0];
       }
+      // } catch (e) {
+      // console.error(`Error fetching checkin for habit ${habit.id}:`, e);
+      // }
     });
 
     await Promise.all(promises);
