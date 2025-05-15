@@ -119,7 +119,7 @@ const HabitTypeDistribution: React.FC<HabitTypeDistributionProps> = ({
             dataKey="value"
             animationDuration={1000}
           >
-            {data.map((entry, index) => (
+            {data.map((_, index) => (
               <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
             ))}
           </Pie>

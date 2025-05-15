@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Flame, Award, TrendingUp } from "lucide-react";
+import { Flame, Award } from "lucide-react";
 import type { AnalyticsSummary } from "../../services/analyticsService";
 
 interface HabitPerformanceTableProps {

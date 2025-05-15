@@ -10,8 +10,7 @@ import {
   ChevronRight,
   Edit,
   Trash,
-  AlertCircle,
-  Zap
+  AlertCircle
 } from "lucide-react"
 import { activityService, type Activity, formatRelativeTime } from "../../services/activityService"
 

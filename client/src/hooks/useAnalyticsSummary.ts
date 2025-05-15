@@ -47,10 +47,9 @@ export const useAnalyticsSummary = (
           ? error.message
           : "Failed to fetch analytics summary";
       setSummaryError(errorMessage);
-      showToast({
-        type: "error",
-        message: "Failed to load analytics summary. Please try again later.",
-      });
+      showToast.error(
+        "Failed to load analytics summary. Please try again later."
+      );
     } finally {
       setSummaryLoading(false);
     }

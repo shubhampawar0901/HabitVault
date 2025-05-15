@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import AppLayout from "../../components/layout/AppLayout";
 import { habitService, type Habit, type HabitCheckin } from "../../services/habitService";
 import { showToast } from "../../components/common/Toast";
-import { useTheme } from "../../hooks/useThemeContext";
 
 interface CalendarDay {
   day: number;
@@ -18,7 +17,8 @@ interface CalendarDay {
 }
 
 const CalendarPage = () => {
-  const { isDarkMode } = useTheme();
+  // We don't need isDarkMode here as it's handled by the theme context
+  // const { isDarkMode } = useTheme();
   const [loading, setLoading] = useState(true);
   const [habits, setHabits] = useState<Habit[]>([]);
   const [allCheckins, setAllCheckins] = useState<Record<number, HabitCheckin[]>>({});

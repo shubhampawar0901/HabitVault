@@ -107,7 +107,6 @@ const StreakHistoryChart: React.FC<StreakHistoryChartProps> = ({
             fill={isDarkMode ? "#60a5fa" : "#3b82f6"}
             radius={[4, 4, 0, 0]}
             animationDuration={1000}
-            animationDelay={300}
           />
         </BarChart>
       </ResponsiveContainer>

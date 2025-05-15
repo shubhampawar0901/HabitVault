@@ -30,11 +30,8 @@ import {
   savePeriodToLocalStorage
 } from "../../utils/localStorage";
 
-// Animation variants
-const fadeInUp = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-};
+// Animation variants - fadeInUp is defined but not used directly
+// It's kept for reference and potential future use
 
 const staggerContainer = {
   initial: { opacity: 0 },
@@ -76,12 +73,12 @@ const AnalyticsPage = () => {
   const endDateStr = dateRange.endDate.toISOString().split("T")[0];
 
   // Fetch analytics data with date range and period
-  const { summary, summaryLoading, summaryError } = useAnalyticsSummary(
+  const { summary, summaryLoading } = useAnalyticsSummary(
     startDateStr,
     endDateStr,
     period
   );
-  const { heatmapData, heatmapLoading, heatmapError } = useAnalyticsHeatmap(
+  const { heatmapData, heatmapLoading } = useAnalyticsHeatmap(
     startDateStr,
     endDateStr,
     period

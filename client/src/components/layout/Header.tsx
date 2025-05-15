@@ -53,7 +53,7 @@ const Header = () => {
                 </li>
                 <li>
                   <span className="text-gray-500">
-                    Hello, {user?.firstName}
+                    Hello, {user?.name}
                   </span>
                 </li>
               </>

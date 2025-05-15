@@ -1,5 +1,4 @@
 import { toast } from 'react-hot-toast';
-import React from 'react';
 import type { ReactNode } from 'react';
 
 /**

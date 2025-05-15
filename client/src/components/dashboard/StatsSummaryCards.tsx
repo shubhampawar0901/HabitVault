@@ -138,7 +138,8 @@ const StatCard: React.FC<StatCardProps> = ({
 };
 
 const StatsSummaryCards: React.FC = () => {
-  const { isDarkMode } = useTheme();
+  // We don't need isDarkMode here as it's handled by the theme context
+  // const { isDarkMode } = useTheme();
   const dashboardData = useDashboardData();
   const [trends, setTrends] = useState({
     totalHabits: { direction: "up", value: "+0" },

@@ -45,10 +45,7 @@ export const useAnalyticsHeatmap = (
       const errorMessage =
         error instanceof Error ? error.message : "Failed to fetch heatmap data";
       setHeatmapError(errorMessage);
-      showToast({
-        type: "error",
-        message: "Failed to load heatmap data. Please try again later.",
-      });
+      showToast.error("Failed to load heatmap data. Please try again later.");
     } finally {
       setHeatmapLoading(false);
     }

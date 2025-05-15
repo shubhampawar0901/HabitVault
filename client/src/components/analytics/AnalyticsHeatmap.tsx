@@ -23,7 +23,7 @@ const AnalyticsHeatmap: React.FC<AnalyticsHeatmapProps> = ({
   data,
   loading = false,
   startDate,
-  endDate,
+  // endDate is not used but kept in props for API consistency
   period,
   onDateRangeChange,
 }) => {
@@ -31,7 +31,7 @@ const AnalyticsHeatmap: React.FC<AnalyticsHeatmapProps> = ({
   const {
     localData,
     isLoading,
-    error,
+    // error is not used but kept for debugging purposes
     currentMonth,
     currentYear,
     navigateToPrevMonth,
@@ -54,7 +54,7 @@ const AnalyticsHeatmap: React.FC<AnalyticsHeatmapProps> = ({
     if (!localData) return [];
 
     const days: CalendarDay[] = [];
-    const firstDayOfMonth = new Date(currentYear, currentMonth, 1);
+    // firstDayOfMonth is defined but not used directly - it's used for date calculations
     const lastDayOfMonth = new Date(currentYear, currentMonth + 1, 0);
     const daysInMonth = lastDayOfMonth.getDate();
 

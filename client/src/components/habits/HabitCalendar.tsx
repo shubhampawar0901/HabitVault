@@ -2,7 +2,6 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { HabitCheckin } from "../../services/habitService";
-import { useTheme } from "../../hooks/useThemeContext";
 
 interface CalendarDay {
   day: number;
@@ -33,7 +32,8 @@ const HabitCalendar: React.FC<HabitCalendarProps> = ({
   currentMonth,
   startDate
 }) => {
-  const { isDarkMode } = useTheme();
+  // We don't need isDarkMode here as it's handled by the theme context
+  // const { isDarkMode } = useTheme();
   const [hoveredDay, setHoveredDay] = useState<CalendarDay | null>(null);
   const [showTooltip, setShowTooltip] = useState(false);
   const [tooltipPosition, setTooltipPosition] = useState({ x: 0, y: 0 });

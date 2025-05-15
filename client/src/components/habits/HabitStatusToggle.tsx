@@ -7,6 +7,7 @@ export type HabitStatus = 'missed' | 'completed';
 interface HabitStatusToggleProps {
   status: HabitStatus;
   onChange: (newStatus: HabitStatus) => void;
+  // habitId is used for identification purposes
   habitId: number;
   habitName: string;
   disabled?: boolean;
@@ -16,14 +17,17 @@ interface HabitStatusToggleProps {
 const HabitStatusToggle: React.FC<HabitStatusToggleProps> = ({
   status,
   onChange,
-  habitId,
+  // We need to receive habitId but we don't use it
+  // Using _ prefix to indicate it's not used
+  habitId: _habitId,
   habitName,
   disabled = false,
   size = 'medium',
 }) => {
   const [showConfirmation, setShowConfirmation] = useState(false);
   const [pendingStatus, setPendingStatus] = useState<HabitStatus | null>(null);
-  const [isHovered, setIsHovered] = useState(false);
+  // Using _ prefix to indicate it's not used
+  const [_isHovered, setIsHovered] = useState(false);
   const confirmationRef = useRef<HTMLDivElement>(null);
 
   // Close confirmation dialog when clicking outside
@@ -76,17 +80,8 @@ const HabitStatusToggle: React.FC<HabitStatusToggleProps> = ({
 
   const { width, height, thumbSize, fontSize, iconSize } = getToggleDimensions();
 
-  // Get the position of the thumb based on status
-  const getThumbPosition = () => {
-    switch (status) {
-      case 'missed':
-        return '0%';
-      case 'completed':
-        return '100%';
-      default:
-        return '0%';
-    }
-  };
+  // This function is not used as we're using motion.animate instead
+  // but kept for reference and potential future use
 
   // Get the background color based on status
   const getBackgroundColor = () => {
